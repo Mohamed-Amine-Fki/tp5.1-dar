@@ -1,5 +1,9 @@
 package rmiService;
 
-public interface IConversion {
-	double convertirMontant(double mt);
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface IConversion extends Remote {
+    double convertirMontant(double mt) throws RemoteException;
+
 }

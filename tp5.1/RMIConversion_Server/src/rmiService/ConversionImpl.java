@@ -1,11 +1,14 @@
 package rmiService;
 
-public class ConversionImpl implements IConversion {
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-	@Override
-	public double convertirMontant(double mt) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+public class ConversionImpl extends UnicastRemoteObject implements IConversion {
+    @Override
+    public double convertirMontant(double mt) throws RemoteException {
+        return mt*3.3;
+    }
+    public ConversionImpl() throws RemoteException {
+    }
 
 }
